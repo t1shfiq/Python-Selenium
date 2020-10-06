@@ -1,18 +1,31 @@
 from selenium import webdriver
 import time
+#Python's in-buiilt testing module
+import unittest
 
-driver = webdriver.Chrome(executable_path="C:\Program Files (x86)\chromedriver.exe")
-driver.implicitly_wait(10)
-driver.maximize_window()
+class LoginTest(unittest.TestCase):
 
-driver.get("https://opensource-demo.orangehrmlive.com/")
-driver.find_element_by_id("txtUsername").send_keys("Admin")
-driver.find_element_by_id("txtPassword").send_keys("admin123")
-driver.find_element_by_id("btnLogin").click()
-driver.find_element_by_id("welcome").click()
-driver.find_element_by_link_text("Logout").click()
+    ## annotation for using class functions
+    @classmethod
+    ## setUpClass will run only once before all the test methods
+    def setUp(cls):
+        cls.driver = webdriver.Chrome(executable_path="C:\Program Files (x86)\chromedriver.exe")
+        cls.driver.implicitly_wait(10)
+        cls.driver.maximize_window()
 
-time.sleep(5)
-driver.close()
-driver.quit()
-print("Test Completed")
+    ## test for a valid log in
+    def test_login_valid(self):
+        self.driver.get("https://opensource-demo.orangehrmlive.com/")
+        self.driver.find_element_by_id("txtUsername").send_keys("Admin")
+        self.driver.find_element_by_id("txtPassword").send_keys("admin123")
+        self.driver.find_element_by_id("btnLogin").click()
+        self.driver.find_element_by_id("welcome").click()
+        self.driver.find_element_by_link_text("Logout").click()
+        time.sleep(5)
+
+    @classmethod
+    ## teardownclass will run after all the tests are completed
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        print("Test Completed")
