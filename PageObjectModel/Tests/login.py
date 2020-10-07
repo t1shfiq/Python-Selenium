@@ -3,8 +3,8 @@ import time
 #Python's in-buiilt testing module
 import unittest
 
-from python_selenium.PageObjectModel.Pages.loginPage import LoginPage
-from python_selenium.PageObjectModel.Pages.loginPage import HomePage
+from Python-Selenium.PageObjectModel.Pages.loginPage import LoginPage
+from Python-Selenium.PageObjectModel.Pages.loginPage import HomePage
 
 class LoginTest(unittest.TestCase):
 

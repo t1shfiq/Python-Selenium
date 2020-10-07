@@ -1,15 +1,17 @@
+from Python-Selenium.PageObjectModel.Locators.locators import Locators
+
 class LoginPage():
 
     def __init__(self, driver):
         self.driver = driver
 
         #objects
-        self.username_testbox_id = "txtUsername"
+        self.username_testbox_id = Locators.username_textbox_id
         self.password_textbox_id = "txtPassword"
         self.login_button_id = "btnLogin"
 
     #all actions to be performed on the objects
-    
+
     def enter_username(self, username):
         self.driver.find_element_by_id(self.username_textbox_id).clear()
         self.driver.find_element_by_id(self.username_textbox_id).send_keys(username)
