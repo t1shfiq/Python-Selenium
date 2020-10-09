@@ -4,4 +4,4 @@ A python program which uses Selenium to automate login and logout process for a 
 
 Used pythons in-built unnittest module to write unit tests. Page Object Model design pattern is used. 
 
-The results of the test cases got outputted as an HTML output, please refer Test_Result.png.
+The results of the test cases got outputted as an HTML output, please refer to Test_Result.png.
