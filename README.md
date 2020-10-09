@@ -1,5 +1,7 @@
 # Python-Selenium
 
-A python program which displays the unit test results at the browser level. Screenshots to come soon.
+A python program which uses Selenium to automate login and logout process for a user on a Dummy authentication portal : https://opensource-demo.orangehrmlive.com/
 
-The test result is based on the results of the automation I did using selenium where the user can log in and log out.
+Used pythons in-built unnittest module to write unit tests. Page Object Model design pattern is used. 
+
+The results of the test cases got outputted as an HTML output, please refer Test_Result.png.
