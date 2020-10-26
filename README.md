@@ -7,4 +7,4 @@ Used Python's in-built unnittest module to write unit tests. Page Object Model d
 The results of the test cases got outputted as an HTML output, please refer to the screenshot:
 
 
-![](Screenshots/Test_Result.png)
+![](Test_Result.png)
